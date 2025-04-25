@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --content-max-width: 1200px;
+    --main-colour: #1795DD;
+    --light-background-colour: #FCFAF6;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+    padding-top: 6.5rem;
+    background: var(--light-background-colour);
+}
+
+/* 
+==========================================================
+Contact Banner
+==========================================================
+*/
+
+.page-content {
+    background-color: var(--light-background-colour);
+    width: 80vw;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding-top: 14px;
+}
+
+.contact-banner {
+    height: 30vh;
+    max-width: var(--content-max-width);
+    background: url('../images/contact-banner-v2.png') center/cover no-repeat;
+    border-radius: 7px;
+    position: relative;
+}
+
+.banner-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-text {
+    text-align: center;
+    color: white;
+}
+
+.banner-text h1 {
+    font-size: 40px;
+}
+
+.banner-text p {
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+/* 
+==========================================================
+Contact Content (Details + Form)
+==========================================================
+*/
+
+.contact-content {
+    display: grid;
+    padding-top: 20px;
+    gap: 30px 10px;
+    /* width: 100%;
+    margin: 0 auto; 
+    max-width: var(--content-max-width); */
+    /* border: 2px solid red; */
+}
+
+.contact-details,
+.contact-form {
+    /* border: 2px solid blue; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid grey;
+}
+
+.contact-details ul {
+    padding-left: 0;
+}
+
+.contact-details h2,
+.contact-form h2 {
+    color: var(--main-colour);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.contact-details li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.contact-details li i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    padding-bottom: 58px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border: 2px solid #1795DD;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: background-color 0.5s, color 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #1795DD;
+    color:white;
+}
+
+.contact-form form {
+    width: 95%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-bottom: 15px;
+}
+
+.contact-form label,
+.contact-form p {
+    font-weight: 500;
+    text-align: left;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fefcf9;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+.contact-form button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--main-colour);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+  
+.contact-form button[type="submit"]:hover {
+    background-color: #FFF;
+    color: var(--main-colour);
+    border-color: var(--main-colour);
+}
+
+/* Media Query */
+
+@media screen and (min-width: 990px) {
+    .banner-text h1 {
+        font-size: 47px;
+    }
+
+    .banner-text p {
+        font-weight: 500;
+        font-size: 17px; 
+        padding-bottom: 10px;
+    }
+
+    .contact-content {
+        grid-template-columns: 3fr 4fr;
+        /* gap: 2rem;  */
+    }
+
+    .contact-details,
+    .contact-form {
+        /* border: 2px solid blue; */
+        /* display:flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; */
+        border-bottom: none;
+    }
+
+    .contact-form form {
+        width: 80%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding-bottom: 15px;
+    }
+}
+
+
+
+
+
