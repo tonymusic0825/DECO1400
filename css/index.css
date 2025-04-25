@@ -23,3 +23,142 @@ main {
     margin: 0 auto;
     padding-top: 14px;
 }
+
+/* 
+==========================================================
+Home Intro Section
+==========================================================
+*/
+
+.home-intro {
+    display: grid;
+    /* border-bottom: 2px solid grey; */
+}
+
+.home-intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    /* border: 2px solid red; */
+}
+
+.home-intro-text h1 {
+    font-size: 55px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    margin: 0;
+}
+
+.home-intro-text h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--main-colour);
+}
+
+.home-intro-text p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #52514e;
+}
+
+.page-button {
+    width: 190px;
+    height: 60px;
+    background: #1795DD;
+    border-radius: 4px;
+    border: 2px solid var(--main-colour);
+    display: inline-flex;
+    font-size: 20px;
+    font-weight: 350;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.page-button:hover{
+    background-color: white;
+}
+
+.page-button:hover a {
+    color: #1795DD; 
+}
+
+.page-button a {
+    color: white;
+    text-decoration: none; 
+    transition: 0.4s;
+}
+
+.home-intro-image {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid blue; */
+}
+
+.home-intro-image img {
+    height: 400px;
+    width: 400px;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .home-intro-image img {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .home-intro {
+        grid-template-columns: 4fr 3fr;
+    }
+
+    .home-intro-image img {
+        margin-left: 80px;
+        height: 430px;
+        width: 430px;
+    }
+
+    .home-intro-text h1 {
+        font-size: 55px;
+    }
+    
+    .home-intro-text h3 {
+        font-size: 35px;
+    }
+    
+    .home-intro-text p {
+        font-size: 20px;
+    }
+
+    .home-intro-text {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        margin-top: 0;
+    }
+}
+
+/* 
+==========================================================
+Home Projects Section
+==========================================================
+*/
+
+.home-project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
