@@ -16,19 +16,19 @@ body {
     background: var(--light-background-colour);
 }
 
-/* 
-==========================================================
-Contact Banner
-==========================================================
-*/
-
-.page-content {
+main {
     background-color: var(--light-background-colour);
     width: 80vw;
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding-top: 14px;
 }
+
+/* 
+==========================================================
+Contact Banner
+==========================================================
+*/
 
 .contact-banner {
     height: 30vh;

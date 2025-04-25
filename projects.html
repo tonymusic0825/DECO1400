@@ -3,13 +3,207 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>YSC | Home</title>
-        <link rel="stylesheet" href="css/style.css"/>
+        <title>YSC | Contact</title>
+        <link rel="stylesheet" href="css/navbar.css"/>
+        <link rel="stylesheet" href="css/projects.css"/>
+        <script src="https://kit.fontawesome.com/cfa57116e6.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        Projects
+        <!-- Nav Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-header">
+                    <a href="index.html" class="nav-logo">Youngsu.</a>
+                    <button type="button" class="hambgr-btn hambgr">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="projects.html" class="nav-link active-page">Projects</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a class="nav-link"><i class="fa-solid fa-moon"></i></a>
+                </div>
+            </div>
+            <div id="scroll-progress"></div>
+        </nav>
+        <!-- End of Nav Bar -->
+        <main class="page-content">
+            <!-- Projects -->
+            <header class="projects-banner">
+                <div class="projects-intro-container">
+                    <div class="projects-banner-text">
+                        <h1>Welcome! To My Digital Playground</h1>
+                        <p>Here's where I experiment and bring ideas to life, showcasing a mix of both <br>
+                            school and personal projects. Check out my completed ones (click'em for <br>
+                            details!) alongside some creations still under construction.
+                        </p>
+                    </div>
+                </div>
+            </header>
+            <section class="projects-container">
+                <div class="filter-container">
+                    <select id="filterDropdown" class="filter">
+                        <option disabled selected>Filter By</option>
+                        <option>All Projects</option>
+                        <option>School</option>
+                        <option>Personal</option>
+                        <option>None</option>
+                    </select>
+                </div>
+                <div class="projects-list">
+                    <!-- NST-->
+                    <a href="#" class="project-card" data-tags="complete python personal">
+                        <img src="./images/NST.png" alt="Neural Style Transfer preview">
+                        <div class="project-tags">
+                          <span class="tag complete">Complete</span>
+                          <span class="tag python">Python</span>
+                          <span class="tag personal">Personal</span>
+                        </div>
+                        <h2>Neural Style Transfer</h2>
+                        <p>
+                          This project uses Neural Style Transfer to combine the content of one image with the artistic style of another, 
+                          creating visually unique outputs.
+                        </p>
+                    </a>
+                    <!-- End of NST -->
+
+                    <!-- Style Gan -->
+                    <a href="#" class="project-card" data-tags="in-progress python personal">
+                      <img src="./images/StyleGAN.png" alt="StyleGAN preview">
+                      <div class="project-tags">
+                        <span class="tag in-progress">In-Progress</span>
+                        <span class="tag python">Python</span>
+                        <span class="tag personal">Personal</span>
+                      </div>
+                      <h2>Image Generation with StyleGAN</h2>
+                      <p>
+                        This project explores StyleGAN to generate realistic images from random noise. 
+                        It allows control over features at different levels.
+                      </p>
+                    </a>
+
+                    <!-- CSSE2310: Computer Systems -->
+                    <a href="#" class="project-card" data-tags="complete c school">
+                        <img src="./images/csse2310.png" alt="CSSE2310 Project Screenshot">
+                        <div class="project-tags">
+                        <span class="tag complete">Complete</span>
+                        <span class="tag c">C</span>
+                        <span class="tag school">School</span>
+                        </div>
+                        <h2>CSSE2310: Computer Systems</h2>
+                        <p>
+                        This collection showcases fundamental computer systems and principles programming skills, 
+                        encompassing projects in string manipulation and algorithm design, system utilities and process management, 
+                        and network programming with multi-threading (client-server image transformation).
+                        </p>
+                    </a>
+                    
+                    <!-- Personal Portfolio Website -->
+                    <a href="#" class="project-card" data-tags="complete html school">
+                        <img src="./images/Home.png" alt="Personal Portfolio Website Screenshot">
+                        <div class="project-tags">
+                        <span class="tag complete">Complete</span>
+                        <span class="tag html">HTML / CSS</span>
+                        <span class="tag school">School</span>
+                        </div>
+                        <h2>Personal Portfolio Website</h2>
+                        <p>
+                        This project demonstrates proficiency in front-end web development, utilizing HTML for structure, 
+                        CSS for styling, and JavaScript for interactive elements. It showcases the ability to create a responsive 
+                        and engaging personal portfolio website.
+                        </p>
+                    </a>
+
+                    <!-- Snake Game AI -->
+                    <a href="#" class="project-card" data-tags="complete python personal">
+                        <img src="./images/snake ai.png" alt="Personal Portfolio Website Screenshot">
+                        <div class="project-tags">
+                        <span class="tag complete">Complete</span>
+                        <span class="tag python">Python</span>
+                        <span class="tag personal">Personal</span>
+                        </div>
+                        <h2>Snake Game AI</h2>
+                        <p>
+                        This project uses PyTorch to create a simple neural network which is able to play the Snake Game.
+                        Both the game and AI is personally made. We use Q-learning with LSTM techniques to apply reinforcement 
+                        learning on rewards.
+                        </p>
+                    </a>
+
+                    <!-- A* Visualization -->
+                    <a href="#" class="project-card" data-tags="complete python school personal">
+                        <img src="./images/astar algo.png" alt="Personal Portfolio Website Screenshot">
+                        <div class="project-tags">
+                        <span class="tag complete">Complete</span>
+                        <span class="tag python">Python</span>
+                        <span class="tag school">School</span>
+                        <span class="tag personal">Personal</span>
+                        </div>
+                        <h2>A* Algorithm Visualization</h2>
+                        <p>
+                        This is a very simple project. A visualization of the A* algorithm that I created after learning about them
+                        in my data structures and algorithm course.
+                        </p>
+                    </a>
+
+                    <!-- Sentiment analysis app -->
+                    <a href="#" class="project-card" data-tags="in-progress python c personal">
+                        <img src="./images/sentiment.png" alt="Personal Portfolio Website Screenshot">
+                        <div class="project-tags">
+                            <span class="tag in-progress">In-Progress</span>
+                            <span class="tag python">Python</span>
+                            <span class="tag c">C</span>
+                            <span class="tag personal">Personal</span>
+                        </div>
+                        <h2>Sentiment Sleuth</h2>
+                        <p>
+                            A sentiment analysis app built with a fine-tuned BERT model, classifying tweets or reviews as positive, 
+                            negative, or neutral. It visualizes emotional trends with interactive charts and integrates real-time Twitter data.
+                        </p>
+                    </a>
+
+                    <!-- Flashcard AI -->
+                    <a href="#" class="project-card" data-tags="complete javascript html private personal">
+                        <img src="./images/flashcards.png" alt="Personal Portfolio Website Screenshot">
+                        <div class="project-tags">
+                            <span class="tag complete">Complete</span>
+                            <span class="tag javascript">JavaScript</span>
+                            <span class="tag html">HTML / CSS</span>
+                            <span class="tag private">Private</span>
+                            <span class="tag personal">Personal</span>
+                        </div>
+                        <h2>AI Flashcard Generator</h2>
+                        <p>
+                            Upload lecture slides or paste notes, and this app generates flashcards using GPT-3.5 API for active recall. 
+                            Built with vanilla JS and OpenAI, with a clean, responsive frontend.
+                        </p>
+                    </a>
+
+                    <!-- Personal Portfolio Website -->
+                    <a href="#" class="project-card" data-tags="complete html school">
+                        <img src="./images/Home.png" alt="Personal Portfolio Website Screenshot">
+                        <div class="project-tags">
+                        <span class="tag complete">Complete</span>
+                        <span class="tag html">HTML / CSS</span>
+                        <span class="tag school">School</span>
+                        </div>
+                        <h2>Personal Portfolio Website</h2>
+                        <p>
+                        This project demonstrates proficiency in front-end web development, utilizing HTML for structure, CSS for styling, and JavaScript for interactive elements. It showcases the ability to create a responsive and engaging personal portfolio website.
+                        </p>
+                    </a>
+                </div>
+            </section>
+            <!-- End of Projects -->
+            <!-- Start of Footer -->
+            <footer class="back-top">
+                <h5>Back To Top</h5>
+                <button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+            </footer>
+        </main>
+    <script src="js/script.js"></script>
     </body>
-
-
 </html>
