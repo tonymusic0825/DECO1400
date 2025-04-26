@@ -238,8 +238,8 @@ Projects Grid/Cards
     60% { transform: translateX(-1px); }
     80% { transform: translateX(1px); }
     100% { transform: translateX(0); }
-  }
+}
   
-  .project-card.buzzing {
+.project-card.buzzing {
     animation: buzz 0.2s ease;
-  }
+}

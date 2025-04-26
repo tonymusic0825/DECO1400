@@ -21,8 +21,268 @@ main {
     width: 80vw;
     max-width: var(--content-max-width);
     margin: 0 auto;
-    /* padding-top: 14px; */
 }
+
+
+/* 
+==========================================================
+CV
+==========================================================
+*/
+
+.cv-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cv-title h1 {
+    color: var(--main-colour);
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.content header p {
+    margin-top: 15px;
+    color: #464646;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    /* max-width: 1000px; */
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    background-color: var(--light-background-colour);
+    padding: 2rem 0;
+    /* gap: 6rem; */
+    justify-content: center;
+    align-items: center;
+}
+
+.content header h1 {
+    margin-top: 6px;
+}
+
+.sidebar {
+    position: sticky;
+    top: 6.5rem; /* height of navbar */
+    align-self: start;
+    height: 0;
+    overflow: hidden;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 11px;
+    cursor: pointer;
+    padding-left: 10px;
+    border-left: 2px solid transparent;
+    transition: all 0.3s 
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #464646;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.sidebar nav ul li:hover a {
+    color: var(--main-colour);
+}
+
+.sidebar nav ul li:hover {
+    border-left: 2px solid var(--main-colour);
+}
+
+.sidebar nav ul li a.active {
+    color: var(--main-colour);
+}
+
+.sidebar nav ul li.active {
+    border-left: 2px solid var(--main-colour);
+}
+
+.content {
+    flex: 1;
+    width: 100%;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1.5px solid var(--main-colour);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2rem;
+}
+
+.card header h2 {
+    margin-top: 0;
+    margin-bottom: 13px;
+    font-size: 31px;
+    font-weight: 600;
+}
+
+.card h3 {
+    color: var(--main-colour);
+    margin-top: 8px;
+    margin-bottom: 3px;
+}
+
+.card h4 {
+    font-size: 15px;
+    margin-top: 0;
+    font-weight: 400;
+    /* margin-bottom: 0; */
+}
+
+.card p {
+    color: #6D6D6D;
+    font-size: 16px;
+}
+
+.card-grid {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+
+.last-item {
+    border-bottom: 1px solid var(--main-colour);
+    padding-bottom: 20px;
+}
+
+.date-tag {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-colour);
+    width: 130px;
+    height: 22px;
+    border-radius: 5px;
+}
+
+.date-tag p {
+    font-size: 13px;
+    color: white;
+}
+
+.education-break {
+    border-bottom: 1px solid var(--main-colour);
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width: 900px) {
+    .content-container {
+        flex-direction: row;
+        max-width: 850px;
+        gap: 4rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content {
+        width: 60%;
+    }
+
+    .sidebar {
+        height: 462px;
+        width: 120px;
+    }
+}
+
+
+
+
+/*  */
+.back-top {
+    display:flex;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 15px; 
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.back-top button {
+    margin-top: -10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px var(--main-colour) solid;
+    background-color: var(--main-colour);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.back-top button:hover {
+    background-color: white;
+    color: var(--main-colour);
+}
+
+.back-top h5 {
+    color: var(--main-colour);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
 ==========================================================
@@ -114,9 +374,10 @@ About Intro Section
 }
 
 .page-button {
-    width: 190px;
-    height: 60px;
-    background: #1795DD;
+    margin-left: auto;
+    width: 140px;
+    height: 45px;
+    background: var(--main-colour);
     border-radius: 4px;
     border: 2px solid var(--main-colour);
     display: inline-flex;
@@ -134,13 +395,14 @@ About Intro Section
 }
 
 .page-button:hover a {
-    color: #1795DD; 
+    color: var(--main-colour)
 }
 
 .page-button a {
     color: white;
     text-decoration: none; 
     transition: 0.4s;
+    font-size: 16px;
 }
 
 .about-intro-image {

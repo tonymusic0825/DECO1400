@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-
     // Projects filtering
     const filterDropdown = getElement('#filterDropdown');
     if (filterDropdown) {
@@ -55,6 +54,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     }
+
+    // CV Navigation Aside
+    const navLinks = getElements('nav a[href^="#"]');
+    if (navLinks.length > 0) {
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          const targetId = link.getAttribute('href').substring(1); // remove #
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            const navbarHeight = getElement('nav').offsetHeight + 10; // adjust if needed
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - navbarHeight;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
+
+    // Scroll Spy to highlight active nav link based on scroll position
+    const manualBreakpoints = [
+      { id: 'work', offset: 0 },
+      { id: 'education', offset: 1100 },
+      { id: 'volunteer', offset: 1350 },
+      { id: 'awards', offset: 1950 },
+      { id: 'certificates', offset: 2900 },
+      { id: 'skills', offset: 3200 },
+      { id: 'languages', offset: 3500 },
+      { id: 'interests', offset: 3500 }
+    ];
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY + 100; 
+      let currentSection = '';
+
+      manualBreakpoints.forEach(bp => {
+        if (scrollPosition >= bp.offset) {
+          currentSection = bp.id;
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        link.parentElement.classList.remove('active');
+
+        if (link.getAttribute('href').substring(1) === currentSection) {
+          link.classList.add('active');
+          link.parentElement.classList.add('active');
+        }
+      });
+    });
+
 
     // Swiper initialisation
     // REF: 
