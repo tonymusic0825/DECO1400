@@ -6,6 +6,7 @@
         <title>YSC | Home</title>
         <link rel="stylesheet" href="css/navbar.css"/>
         <link rel="stylesheet" href="css/index.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <script src="https://kit.fontawesome.com/cfa57116e6.js" crossorigin="anonymous"></script>
     </head>
 
@@ -47,7 +48,52 @@
                     <img src="images/AI.png" alt="Home-Image">
                 </div>
             </section>
-            <section class="recent-projects">
+            <!-- Home Projects Swiper -->
+            <section class="recent-projects swiper">
+                <!-- <div class="home-divider">
+                    <h5>Some of my latest projects</h5>
+                </div> -->
+                <!-- Swiper -->
+                <div class="projects-wrapper">
+                    <ul class="projects-list swiper-wrapper">
+                        <li class="projects-item swiper-slide">
+                            <a href="#" class="projects-link">
+                                <img src="images/NST.png" alt="" class="projects-image">
+                                <p class="project-type">Personal Project</p>
+                                <h3>Neural Style Transfer</h3>
+                            </a>
+                        </li>
+                        <li class="projects-item swiper-slide">
+                            <a href="#" class="projects-link">
+                                <img src="images/NST.png" alt="" class="projects-image">
+                                <p class="project-type">Personal Project</p>
+                                <h3>CSSE2310: Computer Systems</h3>
+                            </a>
+                        </li>
+                        <li class="projects-item swiper-slide">
+                            <a href="#" class="projects-link">
+                                <img src="images/NST.png" alt="" class="projects-image">
+                                <p class="project-type">Personal Project</p>
+                                <h3>Snake Game AI</h3>
+                            </a>
+                        </li>
+                        <li class="projects-item swiper-slide">
+                            <a href="#" class="projects-link">
+                                <img src="images/NST.png" alt="" class="projects-image">
+                                <p class="project-type">Personal Project</p>
+                                <h3>Lorem Epsom</h3>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </section>
+            <!-- End of Home Projects Swiper -->
+
+            <!-- <section class="recent-projects">
                 <div class="home-divider">
                     <h5>Some of my latest projects</h5>
                 </div>
@@ -67,8 +113,9 @@
                         </a>
                     </article>
                 </div>
-            </section>
+            </section> -->
         </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     </body>
 

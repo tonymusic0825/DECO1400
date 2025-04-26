@@ -1,3 +1,5 @@
+// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
 document.addEventListener('DOMContentLoaded', () => {
     const getElement = (selector) => document.querySelector(selector);
     const getElements = (selector) => document.querySelectorAll(selector);
@@ -53,6 +55,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     }
+
+    // Swiper initialisation
+    // REF: 
+    const swiper = new Swiper('.projects-wrapper', {
+        loop: true,
+        spaceBetween: 30,
+        // slidesPerView: 2,    
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 2
+            },
+            // 1024: {
+            //     slidesPerView: 3
+            // }
+        }
+    });
 });
 
 window.addEventListener('scroll', () => {

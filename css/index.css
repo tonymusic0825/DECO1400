@@ -155,10 +155,41 @@ Home Projects Section
 ==========================================================
 */
 
-.home-project-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+.recent-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.projects-list .projects-item {
+    list-style: none;
+}
+
+.projects-list .projects-item .projects-link {
+    user-select: none;
+    /* width: 1000px; */
+    display: block;
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;  
+}
+
+.projects-list .projects-item .projects-link:hover {
+    border-color: var(--main-colour); 
+}
+
+.projects-list .projects-link .projects-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.projects-list .projects-link .project-type {
+    color: var(--main-colour);
+    
+}
 
