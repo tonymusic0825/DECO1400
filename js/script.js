@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
     const contactForm = getElement('#contactForm'); 
 
     if (contactForm) {
@@ -142,6 +141,24 @@ document.addEventListener('DOMContentLoaded', () => {
           console.error('Error:', error);
           alert('❌ There was a problem submitting your form.');
         });
+      });
+    }
+
+    // Light/Dark mode!
+    const darkModeToggle = document.querySelector('.nav-link i.fa-moon');
+
+    if (darkModeToggle) {
+      darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+
+        // Optional: swap the icon between moon 🌙 and sun ☀️
+        if (document.body.classList.contains('dark-mode')) {
+          darkModeToggle.classList.remove('fa-moon');
+          darkModeToggle.classList.add('fa-sun');
+        } else {
+          darkModeToggle.classList.remove('fa-sun');
+          darkModeToggle.classList.add('fa-moon');
+        }
       });
     }
 });

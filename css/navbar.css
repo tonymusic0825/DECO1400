@@ -4,6 +4,7 @@
     --content-max-width: 1200px;
     --main-colour: #1795DD;
     --light-background-colour: #FCFAF6;
+    --dark-mode-background-colour: #212121;
 }
 
 * {
@@ -136,10 +137,15 @@ NAV BAR
 .nav-links a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .nav-link:hover {
     color: var(--main-colour)
+}
+
+.nav-link i {
+    width: 20px;
 }
 
 #scroll-progress {
@@ -194,3 +200,37 @@ NAV BAR
 
 }
 
+
+/* 
+==========================================================
+Dark Mode
+==========================================================
+*/
+
+body.dark-mode {
+    --main-colour: #5e96b6;
+    --light-background-colour: #1c1c1d;
+    --main-text-colour: #e4e4e4;
+}
+
+body.dark-mode .navbar {
+    background-color: rgba(28, 28, 29, 0.95);
+    border-bottom: 1px solid #3b3b3e;
+}
+
+body.dark-mode .nav-link {
+    color: var(--main-text-colour);
+}
+
+body.dark-mode .nav-link:hover {
+    color: var(--main-text-colour);
+}
+
+body.dark-mode .nav-logo {
+    color: var(--main-colour);
+}
+
+body.dark-mode {
+    background: var(--light-background-colour);
+    color: var(--main-text-colour);
+}
