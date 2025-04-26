@@ -25,11 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Buzzing for incomplete projects
+    // Buzzing for incomplete and private projects
     const projectCards = getElements('.project-card');
     projectCards.forEach(card => {
       const hasInProgress = card.querySelector('.tag.in-progress');
-      if (hasInProgress) {
+      const hasPrivate = card.querySelector('.tag.private');
+      if (hasInProgress || hasPrivate) {
         card.addEventListener('click', (e) => {
           e.preventDefault(); // Optional: Prevent link if needed
           card.classList.add('buzzing');
@@ -113,34 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // Swiper initialisation
-    // REF: 
-    // const swiper = new Swiper('.projects-wrapper', {
-    //     loop: true,
-    //     spaceBetween: 30,
-    //     // slidesPerView: 2,    
-
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //     },
-
-    //     navigation: {
-    //       nextEl: '.swiper-button-next',
-    //       prevEl: '.swiper-button-prev',
-    //     },
-
-    //     breakpoints: {
-    //         0: {
-    //             slidesPerView: 1
-    //         },
-    //         768: {
-    //             slidesPerView: 2
-    //         },
-    //         // 1024: {
-    //         //     slidesPerView: 3
-    //         // }
-    //     }
-    // });
 
     const contactForm = getElement('#contactForm'); 
 
