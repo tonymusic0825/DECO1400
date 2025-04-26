@@ -115,32 +115,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Swiper initialisation
     // REF: 
-    const swiper = new Swiper('.projects-wrapper', {
-        loop: true,
-        spaceBetween: 30,
-        // slidesPerView: 2,    
+    // const swiper = new Swiper('.projects-wrapper', {
+    //     loop: true,
+    //     spaceBetween: 30,
+    //     // slidesPerView: 2,    
 
-        pagination: {
-            el: '.swiper-pagination',
-        },
+    //     pagination: {
+    //         el: '.swiper-pagination',
+    //     },
 
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
+    //     navigation: {
+    //       nextEl: '.swiper-button-next',
+    //       prevEl: '.swiper-button-prev',
+    //     },
 
-        breakpoints: {
-            0: {
-                slidesPerView: 1
-            },
-            768: {
-                slidesPerView: 2
-            },
-            // 1024: {
-            //     slidesPerView: 3
-            // }
-        }
-    });
+    //     breakpoints: {
+    //         0: {
+    //             slidesPerView: 1
+    //         },
+    //         768: {
+    //             slidesPerView: 2
+    //         },
+    //         // 1024: {
+    //         //     slidesPerView: 3
+    //         // }
+    //     }
+    // });
+
+    const contactForm = getElement('#contactForm'); 
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Stop browser default
+
+        const formData = new FormData(contactForm);
+
+        fetch('https://formspree.io/f/xblolydk', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json'
+          },
+          body: formData
+        })
+        .then(response => {
+          if (response.ok) {
+            alert('✅ Message sent successfully!');
+            contactForm.reset();
+          } else {
+            alert('⚠️ There was an error sending your message.');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('❌ There was a problem submitting your form.');
+        });
+      });
+    }
 });
 
 window.addEventListener('scroll', () => {
