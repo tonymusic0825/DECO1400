@@ -3,7 +3,21 @@
 :root {
     --content-max-width: 1200px;
     --main-colour: #1795DD;
-    --light-background-colour: #FCFAF6;
+    --background-colour: #FCFAF6;
+    --description-text-colour: #464646;
+
+    --card-description-text: #6D6D6D;
+    --card-border: #1795DD;
+    --card-subheading: #1795DD; 
+    /* --card-background: white; */
+    --card-background: #f3fafd;
+    /* --card-background: #f7f7f5; */
+    /* --card-background: #1795DD; */
+    --date-tag: #1795DD;
+    /* --date-tag: #FCFAF6; */
+    --date-tag-text: white;
+    /* --date-tag-text: black; */
+    /* --date-tag-text: black; */
 }
 
 * {
@@ -13,15 +27,21 @@
 
 body {
     padding-top: 6.5rem;
-    background: var(--light-background-colour);
+    background: var(--background-colour);
 }
 
 main {
-    background-color: var(--light-background-colour);
+    background-color: var(--background-colour);
     width: 80vw;
     max-width: var(--content-max-width);
     margin: 0 auto;
 }
+
+/* 
+.dark-mode {
+    --main-colour: #b38af5;
+    --background-colour: #222222;
+} */
 
 
 /* 
@@ -44,7 +64,8 @@ CV
 
 .content header p {
     margin-top: 15px;
-    color: #464646;
+    color: var(--description-text-colour);
+    transition: all 0.3s;
 }
 
 .content-container {
@@ -54,11 +75,12 @@ CV
     /* max-width: 1000px; */
     max-width: var(--content-max-width);
     margin: 0 auto;
-    background-color: var(--light-background-colour);
+    background-color: var(--background-colour);
     padding: 2rem 0;
     /* gap: 6rem; */
     justify-content: center;
     align-items: center;
+    transition: 0.3s ease-in-out all;
 }
 
 .content header h1 {
@@ -83,12 +105,12 @@ CV
     cursor: pointer;
     padding-left: 10px;
     border-left: 2px solid transparent;
-    transition: all 0.3s 
+    transition: 0.3s ease-in-out all;
 }
 
 .sidebar nav ul li a {
     text-decoration: none;
-    color: #464646;
+    color: var(--description-text-colour);
     font-weight: 500;
     transition: all 0.3s;
 }
@@ -115,12 +137,13 @@ CV
 }
 
 .card {
-    background: white;
+    background: var(--card-background);
     padding: 1rem;
     border-radius: 4px;
-    border: 1.5px solid var(--main-colour);
+    border: 1.5px solid var(--card-border);
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
     margin-bottom: 2rem;
+    transition: 0.3s ease-in-out all;
 }
 
 .card header h2 {
@@ -131,7 +154,8 @@ CV
 }
 
 .card h3 {
-    color: var(--main-colour);
+    color: var(--card-subheading);
+    /* color: var(--background-colour); */
     margin-top: 8px;
     margin-bottom: 3px;
 }
@@ -144,7 +168,7 @@ CV
 }
 
 .card p {
-    color: #6D6D6D;
+    color: var(--card-description-text);
     font-size: 16px;
 }
 
@@ -155,6 +179,7 @@ CV
 
 
 .last-item {
+    /* border-bottom: 1px solid var(--main-colour); */
     border-bottom: 1px solid var(--main-colour);
     padding-bottom: 20px;
 }
@@ -164,7 +189,8 @@ CV
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-colour);
+    /* background-color: var(--main-colour); */
+    background-color: var(--date-tag);
     width: 130px;
     height: 22px;
     border-radius: 5px;
@@ -172,7 +198,7 @@ CV
 
 .date-tag p {
     font-size: 13px;
-    color: white;
+    color: var(--date-tag-text);
 }
 
 .education-break {
@@ -203,7 +229,6 @@ CV
 
 
 
-
 /*  */
 .back-top {
     display:flex;
@@ -224,14 +249,14 @@ CV
     border-radius: 50%;
     border: 1px var(--main-colour) solid;
     background-color: var(--main-colour);
-    color: white;
+    color: var(--date-tag-text);
     font-size: 20px;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .back-top button:hover {
-    background-color: white;
+    background-color: var(--date-tag-text);
     color: var(--main-colour);
 }
 
@@ -366,12 +391,12 @@ About Intro Section
     color: var(--main-colour);
 }
 
-.about-intro-text p {
+/* .about-intro-text p {
     margin-top: 10px;
     font-size: 20px;
     font-weight: 500;
-    color: #52514e;
-}
+    color: white;
+} */
 
 .page-button {
     margin-left: auto;

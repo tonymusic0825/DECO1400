@@ -3,7 +3,14 @@
 :root {
     --content-max-width: 1200px;
     --main-colour: #1795DD;
-    --light-background-colour: #FCFAF6;
+    --background-colour: #FCFAF6;
+    --tag-text: #fff;
+    --card-heading: black;
+    --card-background: #fff;
+    --card-text: #444;
+    --card-border: #ccc;
+    --filter-background: white;
+    --banner-text: black; 
 }
 
 * {
@@ -13,26 +20,26 @@
 
 body {
     padding-top: 6.5rem;
-    background: var(--light-background-colour);
+    background: var(--background-colour);
 }
 
 main {
-    background-color: var(--light-background-colour);
+    background-color: var(--background-colour);
     width: 80vw;
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding-top: 14px;
 }
 
-.tag.complete { background-color: #4CAF50; }     /* Green */
-.tag.in-progress { background-color: #E74C3C; }  /* Red */
-.tag.school { background-color: #000; }          /* Black */
-.tag.personal { background-color: #5C6BC0; }     /* Indigo */
-.tag.python { background-color: #3b8dda; }       /* Blue */
-.tag.c { background-color: #9C27B0; }            /* Purple */
-.tag.html { background-color: orange; }         /* Orange */
-.tag.css { background-color: #1572B6; }          /* Blue */
-.tag.javascript { background-color: #4bc9be; color: white; } /* Yellow */
+.tag.complete { background-color: #4CAF50; }    
+.tag.in-progress { background-color: #E74C3C; }  
+.tag.school { background-color: #000; }          
+.tag.personal { background-color: #5C6BC0; }     
+.tag.python { background-color: #3b8dda; }       
+.tag.c { background-color: #9C27B0; }           
+.tag.html { background-color: orange; }         
+.tag.css { background-color: #1572B6; }       
+.tag.javascript { background-color: #4bc9be; color: white; } 
 .tag.private {background-color:rgb(225, 57, 178); color: white;}
 
 /* 
@@ -66,7 +73,7 @@ Projects Intro
 
 .projects-banner-text {
     text-align: center;
-    color: black; 
+    color: var(--banner-text); 
 }
 
 .projects-banner-text h1 {
@@ -101,7 +108,7 @@ Projects Grid/Cards
   font-size: 16px;
   border: 2px solid var(--main-colour);
   border-radius: 8px;
-  background-color: white;
+  background-color: var(--filter-background);
   color: var(--main-colour);
   font-weight: 500;
   cursor: pointer;
@@ -125,13 +132,13 @@ Projects Grid/Cards
 
 .project-card {
     text-decoration: none;
-    border: 1px solid #ccc;
+    border: 1px solid var(--card-border);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background-color: #fff;
+    background-color: var(--card-background);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* border: 2px solid blue;  */
+    /* border: 1px solid var(--main-colour);  */
 }
 
 .project-card img {
@@ -156,13 +163,13 @@ Projects Grid/Cards
     font-size: 12px;
     padding: 4px 8px;
     border-radius: 4px;
-    color: #fff;
+    color: var(--tag-text);
     font-weight: bold;
 }
 
 .project-card h2 {
     text-decoration: none;
-    color: black;
+    color: var(--card-heading);
     font-size: 20px;
     font-weight: 600;
     padding: 0 12px;
@@ -172,7 +179,7 @@ Projects Grid/Cards
 .project-card p {
     padding: 0 16px 16px 12px;
     font-size: 15px;
-    color: #444;
+    color: var(--card-text);
 }
 
 

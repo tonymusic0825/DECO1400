@@ -3,7 +3,14 @@
 :root {
     --content-max-width: 1200px;
     --main-colour: #1795DD;
-    --light-background-colour: #FCFAF6;
+    --background-colour: #FCFAF6;
+
+    --social-btn-text: black;
+    --social-btn-text-h: white;
+
+    --form-input-border: #ccc;
+    --form-input-background: #fefcf9;
+
 }
 
 * {
@@ -13,11 +20,11 @@
 
 body {
     padding-top: 6.5rem;
-    background: var(--light-background-colour);
+    background: var(--background-colour);
 }
 
 main {
-    background-color: var(--light-background-colour);
+    background-color: var(--background-colour);
     width: 80vw;
     max-width: var(--content-max-width);
     margin: 0 auto;
@@ -75,10 +82,6 @@ Contact Content (Details + Form)
     display: grid;
     padding-top: 20px;
     gap: 30px 10px;
-    /* width: 100%;
-    margin: 0 auto; 
-    max-width: var(--content-max-width); */
-    /* border: 2px solid red; */
 }
 
 .contact-details,
@@ -131,17 +134,17 @@ Contact Content (Details + Form)
     justify-content: center;
     gap: 8px;
     padding: 12px 18px;
-    border: 2px solid #1795DD;
+    border: 2px solid var(--main-colour);
     border-radius: 10px;
     text-decoration: none;
-    color: black;
+    color: var(--social-btn-text);
     font-size: 16px;
     transition: background-color 0.5s, color 0.3s;
 }
 
 .social-btn:hover {
-    background-color: #1795DD;
-    color:white;
+    background-color: var(--main-colour);
+    color:var(--social-btn-text-h);
 }
 
 .contact-form form {
@@ -165,11 +168,19 @@ Contact Content (Details + Form)
     width: 100%;
     padding: 12px 14px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--form-input-border);
     border-radius: 4px;
-    background-color: #fefcf9;
+    background-color: var(--form-input-background);
     resize: vertical;
-    transition: border-color 0.3s;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    /* border: 2px solid #1795DD; */
+    border-color: #1795DD;
+    outline: none;
+    /* box-shadow: 0 0 4px #1795DD33;  */
+    box-shadow: 0 0 0 1px var(--main-colour), 0 0 4px #1795DD33;
 }
 
 .contact-form button[type="submit"] {

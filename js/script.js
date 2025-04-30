@@ -147,15 +147,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Light/Dark mode!
     const darkModeToggle = document.querySelector('.nav-link i.fa-moon');
 
+    // 1. Check on page load if dark mode was previously enabled
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.body.classList.add('dark-mode');
+      if (darkModeToggle) {
+        darkModeToggle.classList.remove('fa-moon');
+        darkModeToggle.classList.add('fa-sun');
+      }
+    }
+
     if (darkModeToggle) {
       darkModeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
-
-        // Optional: swap the icon between moon 🌙 and sun ☀️
+    
+        // Update localStorage based on new mode
         if (document.body.classList.contains('dark-mode')) {
+          localStorage.setItem('darkMode', 'enabled');
           darkModeToggle.classList.remove('fa-moon');
           darkModeToggle.classList.add('fa-sun');
         } else {
+          localStorage.setItem('darkMode', 'disabled');
           darkModeToggle.classList.remove('fa-sun');
           darkModeToggle.classList.add('fa-moon');
         }
@@ -169,4 +180,8 @@ window.addEventListener('scroll', () => {
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = (scrollTop / docHeight) * 100;
     scrollProgress.style.width = `${scrollPercent}%`;
+});
+
+window.addEventListener('load', () => {
+    document.documentElement.classList.remove('no-transition');
 });

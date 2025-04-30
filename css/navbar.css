@@ -113,7 +113,7 @@ NAV BAR
     /* background-color: white; */
     height: 0;
     overflow: hidden;
-    transition: 0.2s ease-in-out all;
+    transition: 0.3s ease-in-out all;
 }
 
 .show-links {
@@ -200,37 +200,3 @@ NAV BAR
 
 }
 
-
-/* 
-==========================================================
-Dark Mode
-==========================================================
-*/
-
-body.dark-mode {
-    --main-colour: #5e96b6;
-    --light-background-colour: #1c1c1d;
-    --main-text-colour: #e4e4e4;
-}
-
-body.dark-mode .navbar {
-    background-color: rgba(28, 28, 29, 0.95);
-    border-bottom: 1px solid #3b3b3e;
-}
-
-body.dark-mode .nav-link {
-    color: var(--main-text-colour);
-}
-
-body.dark-mode .nav-link:hover {
-    color: var(--main-text-colour);
-}
-
-body.dark-mode .nav-logo {
-    color: var(--main-colour);
-}
-
-body.dark-mode {
-    background: var(--light-background-colour);
-    color: var(--main-text-colour);
-}
