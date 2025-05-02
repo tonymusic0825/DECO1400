@@ -2,22 +2,36 @@
 
 :root {
     --content-max-width: 1200px;
+    
     --main-colour: #1795DD;
     --background-colour: #FCFAF6;
     --description-text-colour: #464646;
-
     --card-description-text: #6D6D6D;
     --card-border: #1795DD;
+    --card-heading: black; 
     --card-subheading: #1795DD; 
-    /* --card-background: white; */
+    --card-subsubheading: black; 
     --card-background: #f3fafd;
-    /* --card-background: #f7f7f5; */
-    /* --card-background: #1795DD; */
     --date-tag: #1795DD;
-    /* --date-tag: #FCFAF6; */
     --date-tag-text: white;
-    /* --date-tag-text: black; */
-    /* --date-tag-text: black; */
+}
+
+.dark-mode {
+    --main-colour: #1E90FF;
+    /* --background-colour: #1c1c1d; */
+    --background-colour: #262625;
+    --description-text-colour: #e4e4e4;
+    --card-heading: #e4e4e4;
+    --card-description-text: #c4c2c2;
+    /* --card-border: #1c1c1d; */
+    --card-border: #1E90FF;
+    --card-subheading: #1E90FF; 
+    --card-subsubheading: #e4e4e4;
+    /* --card-background: #363634; */
+    --card-background: #2b2e31;
+    /* --card-background: #222529; */
+    --date-tag: #1E90FF;
+    --date-tag-text: white;
 }
 
 * {
@@ -26,11 +40,13 @@
 }
 
 body {
+    transition: 0.3s ease-in-out all;
     padding-top: 6.5rem;
     background: var(--background-colour);
 }
 
 main {
+    transition: 0.3s ease-in-out all;
     background-color: var(--background-colour);
     width: 80vw;
     max-width: var(--content-max-width);
@@ -85,6 +101,7 @@ CV
 
 .content header h1 {
     margin-top: 6px;
+    transition: 0.3s ease-in-out all;
 }
 
 .sidebar {
@@ -146,29 +163,37 @@ CV
     transition: 0.3s ease-in-out all;
 }
 
+body.dark-mode .card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+}
+
 .card header h2 {
     margin-top: 0;
     margin-bottom: 13px;
     font-size: 31px;
     font-weight: 600;
+    color: var(--card-heading);
+    transition: 0.3s ease-in-out all;
 }
 
 .card h3 {
     color: var(--card-subheading);
-    /* color: var(--background-colour); */
     margin-top: 8px;
     margin-bottom: 3px;
+    transition: 0.3s ease-in-out all;
 }
 
 .card h4 {
     font-size: 15px;
     margin-top: 0;
     font-weight: 400;
-    /* margin-bottom: 0; */
+    color: var(--card-subsubheading);
+    transition: 0.3s ease-in-out all;
 }
 
 .card p {
     color: var(--card-description-text);
+    transition: 0.3s ease-in-out all;
     font-size: 16px;
 }
 

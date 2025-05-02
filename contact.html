@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script>
-            if (localStorage.getItem('darkMode') === 'enabled') {
-              document.documentElement.classList.add('dark-mode', 'no-transition');
-            }
-        </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>YSC | Contact</title>
         <link rel="stylesheet" href="css/navbar.css"/>
         <link rel="stylesheet" href="css/contact.css"/>
-        <link rel="stylesheet" href="css/darkMode.css"/>
+        <!-- <link rel="stylesheet" href="css/darkMode.css"/> -->
         <script src="https://kit.fontawesome.com/cfa57116e6.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
+        <script>
+            if (localStorage.getItem('darkmode') === 'active') {
+                document.body.classList.add('dark-mode');
+            }
+        </script>
         <!-- Nav Bar -->
         <nav class="navbar">
             <div class="nav-container">
@@ -30,7 +30,7 @@
                     <a href="about.html" class="nav-link">About</a>
                     <a href="projects.html" class="nav-link">Projects</a>
                     <a href="contact.html" class="nav-link active-page">Contact</a>
-                    <a class="nav-link"><i class="fa-solid fa-moon"></i></a>
+                    <a class="nav-link theme-toggle"><i class="fa-solid fa-moon"></i></a>
                 </div>
             </div>
             <div id="scroll-progress"></div>

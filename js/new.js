@@ -1,5 +1,6 @@
 const getElement = (selector) => document.querySelector(selector);
 const getElements = (selector) => document.querySelectorAll(selector);
+// let darkMode = localStorage.getItem('darkmode')
 
 // Hamburger menu toggle
 function setupHamburgerMenu() {
@@ -274,21 +275,52 @@ function setupContactForm() {
 
 // Dark/light mode toggle
 function setupDarkMode() {
-    const darkModeToggle = getElement('.nav-link i.fa-moon');
 
-    if (localStorage.getItem('darkMode') === 'enabled') {
+    const themeToggle = document.querySelector('.theme-toggle');
+    const icon = themeToggle?.querySelector('i');
+    
+    const enableDarkmode = () => {
         document.body.classList.add('dark-mode');
-        darkModeToggle?.classList.replace('fa-moon', 'fa-sun');
-    }
-
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', () => {
-            const isDark = document.body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
-            darkModeToggle.classList.replace(isDark ? 'fa-moon' : 'fa-sun', isDark ? 'fa-sun' : 'fa-moon');
-        });
-    }
+        document.head.classList.add('dark-mode');
+        localStorage.setItem('darkmode', 'active');
+        if (icon) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+    };
+    
+    const disableDarkmode = () => {
+        document.body.classList.remove('dark-mode');
+        document.head.classList.remove('dark-mode');
+        localStorage.setItem('darkmode', null);
+        if (icon) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    };
+    
+    if (localStorage.getItem('darkmode') === 'active') enableDarkmode();
+    
+    themeToggle?.addEventListener('click', () => {
+        localStorage.getItem('darkmode') === 'active' ? disableDarkmode() : enableDarkmode();
+    });
 }
+// function setupDarkMode() {
+//     const darkModeToggle = getElement('.nav-link i.fa-moon');
+
+//     if (localStorage.getItem('darkMode') === 'enabled') {
+//         document.body.classList.add('dark-mode');
+//         darkModeToggle?.classList.replace('fa-moon', 'fa-sun');
+//     }
+
+//     if (darkModeToggle) {
+//         darkModeToggle.addEventListener('click', () => {
+//             const isDark = document.body.classList.toggle('dark-mode');
+//             localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+//             darkModeToggle.classList.replace(isDark ? 'fa-moon' : 'fa-sun', isDark ? 'fa-sun' : 'fa-moon');
+//         });
+//     }
+// }
 
 // Scroll progress bar
 function setupScrollProgressBar() {

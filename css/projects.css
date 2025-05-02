@@ -13,6 +13,19 @@
     --banner-text: black; 
 }
 
+.dark-mode {
+    --main-colour: #1E90FF;
+    /* --background-colour: #1c1c1d; */
+    --background-colour: #262625;
+    --tag-text: #fff;
+    --card-heading: #e4e4e4;
+    --card-background: #2b2e31;
+    --card-text: #929191;
+    --card-border: #1c1c1d;
+    --filter-background: white;
+    --banner-text: #e4e4e4; 
+}
+
 * {
     box-sizing: border-box;
     font-family: "IBM Plex Sans", sans-serif;
@@ -21,6 +34,7 @@
 body {
     padding-top: 6.5rem;
     background: var(--background-colour);
+    transition: 0.3s ease-in-out all;
 }
 
 main {
@@ -29,6 +43,7 @@ main {
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding-top: 14px;
+    transition: 0.3s ease-in-out all;
 }
 
 .tag.complete { background-color: #4CAF50; }    

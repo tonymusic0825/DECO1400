@@ -3,8 +3,16 @@
 :root {
     --content-max-width: 1200px;
     --main-colour: #1795DD;
-    --light-background-colour: #FCFAF6;
-    --dark-mode-background-colour: #212121;
+    --background-colour: rgba(252, 250, 246, 0.95);
+    --nav-border: black;
+    --nav-link-colour: black;
+}
+
+.dark-mode {
+    --main-colour: #1E90FF;
+    --background-colour: rgba(28, 28, 29, 0.95);
+    --nav-border: #3b3b3e;
+    --nav-link-colour: #e4e4e4;
 }
 
 * {
@@ -22,7 +30,7 @@ NAV BAR
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(252, 250, 246, 0.95);
+    background-color: var(--background-colour);
     position: fixed;
     top: 0;
     left: 0;
@@ -31,6 +39,11 @@ NAV BAR
     /* opacity: 1; */
     flex-direction: column;
     z-index: 1000;
+    transition: 0.3s ease-in-out all;
+}
+
+body.dark-mode .navbar {
+    background-color: rgba(28, 28, 29, 0.95);
 }
 
 .nav-container {
@@ -128,24 +141,24 @@ NAV BAR
     border-top: 1px solid var(--main-colour);
     list-style: none;
     font-size: 18px;
-    color: black;
+    color: var(--nav-link-colour);
     text-decoration: none;
     font-weight: 500;
     transition: 0.3s;
 }
 
 .nav-links a {
-    color: inherit;
+    color: var(--nav-link-colour);
     text-decoration: none;
     cursor: pointer;
 }
 
-.nav-link:hover {
-    color: var(--main-colour)
-}
-
 .nav-link i {
     width: 20px;
+}
+
+.nav-link:hover {
+    color: var(--main-colour);
 }
 
 #scroll-progress {
@@ -187,6 +200,7 @@ NAV BAR
         transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
         box-shadow: inset 0 0 0 0 #54b3d6;
         border-radius: 3px;
+        color: var(--nav-link-colour);
     }
 
     .nav-link.active-page {
