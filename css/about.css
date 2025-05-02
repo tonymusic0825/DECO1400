@@ -177,6 +177,10 @@ CV
     /* grid-template-columns: 1fr 1fr; */
 }
 
+.skills-card {
+    grid-template-columns: 1fr 1fr;
+}
+
 
 .last-item {
     /* border-bottom: 1px solid var(--main-colour); */
@@ -215,6 +219,10 @@ CV
 
     .card-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .skills-card {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .content {

@@ -81,10 +81,12 @@ Home Intro Section
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     transition: 0.4s;
     cursor: pointer;
+    color: white;
 }
 
 .page-button:hover{
     background-color: white;
+    color: var(--main-colour);
 }
 
 .page-button:hover a {
@@ -110,11 +112,58 @@ Home Intro Section
     width: 400px;
 }
 
+.home-about {
+    display: grid;
+}
+
+.home-about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-about-text p {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #52514e;
+}
+
+.home-about-image {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid blue; */
+}
+
+.home-about-image img {
+    border-radius: 8px;
+    height: 25rem;
+    width: 25rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
 @media screen and (min-width: 768px) {
     
     .home-intro-image img {
         height: 400px;
         width: 400px;
+    }
+
+    .home-about-text p {
+        margin-top: 30px;
+        font-size: 16px;
+        padding-right: 0;
     }
 }
 
@@ -123,10 +172,19 @@ Home Intro Section
         grid-template-columns: 4fr 3fr;
     }
 
+    .home-about {
+        grid-template-columns: 4fr 4fr;
+    }
+
     .home-intro-image img {
         margin-left: 80px;
         height: 430px;
         width: 430px;
+    }
+
+    .home-about-image img {
+        height: 450px;
+        width: 450px;
     }
 
     .home-intro-text h1 {
@@ -149,6 +207,25 @@ Home Intro Section
     }
 }
 
+@media screen and (min-width: 1450px) {
+    .home-about-text p {
+        padding-right: 40px;
+        font-size: 17px;
+    }
+
+    .home-about-image img {
+        height: 500px;
+        width: 500px;
+    }
+
+}
+
+.border {
+    margin-top: 50px;
+    border-top: 1px grey solid;
+    height: 50px;
+}
+
 /* 
 ==========================================================
 Home Projects Section
@@ -161,6 +238,7 @@ Home Projects Section
     justify-content: center;
     align-items: center;
     border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
     margin-top: 30px;
     padding-top: 0;
 }
@@ -169,6 +247,21 @@ Home Projects Section
     margin-top: 15px;
     font-weight: 300;
     font-size: 15px;
+}
+
+.home-divider span a {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--main-colour);
+    position: relative;
+    padding: 3px 3px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 3px;
+}
+
+.home-divider span a:hover {
+    color: white;
+    box-shadow: inset 110px 0 0 0 var(--main-colour);
 }
 
 .home-project-grid {
@@ -188,6 +281,7 @@ Home Projects Section
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.2s;
+    margin-bottom: 40px;
 }
 
 .home-project-card:hover {

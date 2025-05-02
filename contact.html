@@ -72,27 +72,32 @@
                 <div class="contact-form">
                     <h2>Online Contact</h2>
                     <p><small>Please fill all fields except those that are optional</small></p>
-                    <form id="contactForm">
-                        <label>First Name</label>
-                        <input type="text" name="first-name" required />
-                    
-                        <label>Last Name</label>
-                        <input type="text" name="last-name" required />
-                    
-                        <label>Phone Number (Optional)</label>
-                        <input type="text" name="phone-number" />
-                    
-                        <label>Email</label>
-                        <input type="email" name="email" required />
-                    
-                        <label>Message</label>
-                        <textarea name="message" rows="5" required></textarea>
-                    
+                    <form id="contactForm" novalidate>
+                        <label for="first-name">First Name</label>
+                        <span class="error-message" id="first-name-error"></span>
+                        <input type="text" name="first-name" id="first-name" required />
+                      
+                        <label for="last-name">Last Name</label>
+                        <span class="error-message" id="last-name-error"></span>
+                        <input type="text" name="last-name" id="last-name" required />
+                      
+                        <label for="phone-number">Phone Number (Optional)</label>
+                        <input type="text" name="phone-number" id="phone-number" />
+                      
+                        <label for="email">Email</label>
+                        <span class="error-message" id="email-error"></span>
+                        <input type="email" name="email" id="email" required />
+                      
+                        <label for="message">Message</label>
+                        <span class="error-message" id="message-error"></span>
+                        <textarea name="message" id="message" rows="5" required></textarea>
+                      
                         <button type="submit">Submit</button>
                     </form>
                 </div>
             </section>
         </main>
-    <script src="js/script.js"></script>
+    <script src="js/new.js"></script>
+    <!-- <script src="js/script.js"></script> -->
     </body>
 </html>

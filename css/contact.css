@@ -241,6 +241,22 @@ input:focus, textarea:focus, select:focus {
     }
 }
 
+.input-error {
+    border: 2px solid red !important;    
+}
+
+.error-message {
+    color: red;
+    font-size: 0.85rem;
+    display: none;
+    margin: -15px;
+    padding: 0;
+}
+
+form span {
+    display: flex;
+}
+
 
 
 
