@@ -1,6 +1,5 @@
 const getElement = (selector) => document.querySelector(selector);
 const getElements = (selector) => document.querySelectorAll(selector);
-// let darkMode = localStorage.getItem('darkmode')
 
 // Hamburger menu toggle
 function setupHamburgerMenu() {
@@ -40,9 +39,9 @@ function setupBackToTop() {
 function setupProjectBuzz() {
     const projectCards = getElements('.project-card');
 
+    // Check the tags for each project card
     projectCards.forEach(card => {
 
-        // Check for each card the tags
         const hasInProgress = card.querySelector('.tag.in-progress');
         const hasPrivate = card.querySelector('.tag.private');
 
@@ -65,7 +64,8 @@ function setupFilterDropdown() {
     if (filterDropdown) {
             filterDropdown.addEventListener('change', () => {
             const selected = filterDropdown.value.toLowerCase();
-
+            
+            // Loop through each project card to determine if it should be shown
             projectCards.forEach(card => {
                 const tags = card.dataset.tags.toLowerCase();
                 card.style.display = (selected === 'all projects' || tags.includes(selected)) ? 'block' : 'none';
@@ -74,10 +74,11 @@ function setupFilterDropdown() {
     }
 }
 
-// Smooth scrolling for nav links
+// Smooth scrolling for aside nav links in About's Page
 function setupCVNavigation() {
     const navLinks = getElements('nav a[href^="#"]');
 
+    // Loop through each nav link to attach a click event handler
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -85,6 +86,8 @@ function setupCVNavigation() {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
+
+                // Calculate vertical position of the element relative to top
                 const navbarHeight = getElement('nav').offsetHeight + 10;
                 const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
                 window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
@@ -93,8 +96,10 @@ function setupCVNavigation() {
     });
 }
 
-// Aside content navigation for about's page
+// Highlight the active aside nav link on the About's Page
 function setupScrollSpy() {
+
+    // Manual breakpoints for each section IDs and their vertical scroll offsets
     const breakpoints = [
         { id: 'work', offset: 0 },
         { id: 'education', offset: 1100 },
@@ -109,15 +114,18 @@ function setupScrollSpy() {
     const navLinks = getElements('nav a[href^="#"]');
 
     window.addEventListener('scroll', () => {
+        // Add some padding to the scroll position for earlier triggering
         const scrollPosition = window.scrollY + 100;
         let currentSection = '';
 
+        // Determine which section is currently in view based on scroll position
         breakpoints.forEach(bp => {
             if (scrollPosition >= bp.offset) {
                     currentSection = bp.id;
             }
         });
 
+        // Loop through nav links and apply or remove 'active' class
         navLinks.forEach(link => {
             const isActive = link.getAttribute('href').substring(1) === currentSection;
             link.classList.toggle('active', isActive);
@@ -127,13 +135,12 @@ function setupScrollSpy() {
 }
 
 
-//
-// USED TO CHECK CORRECT INPUT FOR CONTACT FORM
-//
+// Check if given name contains a number
 function containsNumber(input) {
     return /\d/.test(input);
 }
 
+// Checks if given name is valid
 function checkName(input) {
     if (containsNumber(input)) {
         return 'Name must not contain numbers.';
@@ -141,29 +148,34 @@ function checkName(input) {
     return '';
 }
 
+// Checks if email is valid
 const commonDomains = ['.com', '.org', '.net', '.edu', '.gov', '.io', '.co', '.me'];
 
 function checkEmail(input) {
     const email = input.value || input;
 
+    // Check that email contains '@' and also '.'
     if (!email.includes('@') || !email.includes('.')) {
         return 'Please enter a valid email address.';
-    } else if (email.length < 4) {
+    } else if (email.length < 5) { // Checks that email is at least length of 5
         return 'Please enter a valid email address.';
-    } else if (!commonDomains.some(tld => email.endsWith(tld))) {
+    } else if (!commonDomains.some(tld => email.endsWith(tld))) { // Check if email ends with common domain
         return 'Email domain is not commonly used.';
     }
 
     return '';
 }
 
+// Checks if message is non-empty and Valid
 function checkMessage(value) {
     value = value.trim()
 
+    // Check if message empty
     if (value === '') {
         return 'Message cannot be empty.';
     }
 
+    // Check if user trying to inject code
     const htmlTagPattern = /<[^>]*>/;
     if (htmlTagPattern.test(value)) {
         return 'HTML tags are not allowed in the message.';
@@ -279,9 +291,9 @@ function setupDarkMode() {
     const themeToggle = document.querySelector('.theme-toggle');
     const icon = themeToggle?.querySelector('i');
     
+    // Enable dark mode
     const enableDarkmode = () => {
         document.body.classList.add('dark-mode');
-        document.head.classList.add('dark-mode');
         localStorage.setItem('darkmode', 'active');
         if (icon) {
             icon.classList.remove('fa-moon');
@@ -289,9 +301,9 @@ function setupDarkMode() {
         }
     };
     
+    // Disable dark mode
     const disableDarkmode = () => {
         document.body.classList.remove('dark-mode');
-        document.head.classList.remove('dark-mode');
         localStorage.setItem('darkmode', null);
         if (icon) {
             icon.classList.remove('fa-sun');
@@ -299,28 +311,13 @@ function setupDarkMode() {
         }
     };
     
+    // Check if dark mode active
     if (localStorage.getItem('darkmode') === 'active') enableDarkmode();
     
     themeToggle?.addEventListener('click', () => {
         localStorage.getItem('darkmode') === 'active' ? disableDarkmode() : enableDarkmode();
     });
 }
-// function setupDarkMode() {
-//     const darkModeToggle = getElement('.nav-link i.fa-moon');
-
-//     if (localStorage.getItem('darkMode') === 'enabled') {
-//         document.body.classList.add('dark-mode');
-//         darkModeToggle?.classList.replace('fa-moon', 'fa-sun');
-//     }
-
-//     if (darkModeToggle) {
-//         darkModeToggle.addEventListener('click', () => {
-//             const isDark = document.body.classList.toggle('dark-mode');
-//             localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
-//             darkModeToggle.classList.replace(isDark ? 'fa-moon' : 'fa-sun', isDark ? 'fa-sun' : 'fa-moon');
-//         });
-//     }
-// }
 
 // Scroll progress bar
 function setupScrollProgressBar() {
@@ -332,14 +329,6 @@ function setupScrollProgressBar() {
         scrollProgress.style.width = `${scrollPercent}%`;
     });
 }
-
-// Disable transitions during initial load
-function setupInitialLoadEffects() {
-    window.addEventListener('load', () => {
-        document.documentElement.classList.remove('no-transition');
-    });
-}
-
 
 // ADD ALL EVENT LISTENERES
 document.addEventListener('DOMContentLoaded', () => {

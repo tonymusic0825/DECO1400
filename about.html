@@ -6,11 +6,11 @@
         <title>YSC | Contact</title>
         <link rel="stylesheet" href="css/navbar.css"/>
         <link rel="stylesheet" href="css/about.css"/>
-        <!-- <link rel="stylesheet" href="css/darkMode.css"/> -->
         <script src="https://kit.fontawesome.com/cfa57116e6.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
+        <!-- To avoid FOUC -->
         <script>
             if (localStorage.getItem('darkmode') === 'active') {
                 document.body.classList.add('dark-mode');
@@ -36,9 +36,11 @@
             <div id="scroll-progress"></div>
         </nav>
         <!-- End of Nav Bar -->
-        <!-- Contact Banner -->
+        <!-- MAIN -->
         <main class="page-content">
+            <!-- CV Content -->
             <div class="content-container">
+                <!-- Aside menu -->
                 <aside class="sidebar">
                     <nav>
                         <ul>
@@ -53,6 +55,8 @@
                         </ul>
                     </nav>
                 </aside>
+                <!-- End of Aside menu -->
+                <!-- CV Cards -->
                 <div class="content">
                     <header>
                         <div class="cv-title">
@@ -66,6 +70,8 @@
                             and technology.
                         </p>
                     </header>
+
+                    <!-- Work Card -->
                     <section id="work">
                         <article class="card">
                             <header><h2>Work</h2></header>
@@ -102,6 +108,8 @@
                             <p>I worked part-time in fast-food restaurants and convinience stores.</p>
                         </article>
                     </section>
+
+                    <!-- Education Card -->
                     <section id="education">
                         <article class="card">
                             <header><h2>Education</h2></header>
@@ -123,6 +131,8 @@
                             </div>
                         </article>
                     </section>
+
+                    <!-- Volunteer Card -->
                     <section id="volunteer">
                         <article class="card">
                             <header><h2>Volunteer</h2></header>
@@ -146,6 +156,8 @@
                                 understand key concepts and apply them effectively..</p>
                         </article>
                     </section>
+
+                    <!-- Awards Card -->
                     <section id="awards">
                         <article class="card">
                             <header><h2>Awards</h2></header>
@@ -185,6 +197,8 @@
                                 to students who have achieved outstanding results with a minimum GPA of 6.6.</p>
                         </article>
                     </section>
+
+                    <!-- Certificates Card -->
                     <section id="certificates">
                         <article class="card">
                             <header><h2>Certificates</h2></header>
@@ -201,6 +215,8 @@
                                 Xavier/He initialization.</p>
                         </article>
                     </section>
+
+                    <!-- Skills Card -->
                     <section id="skills">
                         <article class="card">
                             <header><h2>Skills</h2></header>
@@ -232,6 +248,8 @@
                             </div>
                         </article>
                     </section>
+                    
+                    <!-- Languages Card -->
                     <section id="languages">
                         <article class="card">
                             <header><h2>Languages</h2></header>
@@ -251,6 +269,8 @@
                             </div>
                         </article>
                     </section>
+
+                    <!-- Interests Card -->
                     <section id="interests">
                         <article class="card">
                             <header><h2>Interests</h2></header>
@@ -275,7 +295,9 @@
                         </article>
                     </section>
                 </div>
+                <!-- End of CV Cards -->
             </div>
+            <!-- End of CV Content -->
         <!-- Start of Footer -->
         <footer class="back-top">
             <h5>Back To Top</h5>
@@ -283,6 +305,5 @@
         </footer>
         </main>
     <script src="js/new.js"></script>    
-    <!-- <script src="js/script.js" defer></script>     -->
     </body>
 </html>
