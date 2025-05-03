@@ -9,16 +9,22 @@
     --project-card-background: white;
     --project-card-header: black; 
     --project-card-text: #888;
+    --intro-text-header: black;
+    --button-hover-background: white;
+    --divider-colour: black;
 }
 
 .dark-mode {
     --main-colour: #1E90FF;
     --background-colour: #262625;
-    --home-text-colour: #52514e;
+    --home-text-colour: #c4c2c2;
     --button-text-colour: white;
-    --project-card-background: white;
-    --project-card-header: black; 
+    --project-card-background: #2b2e31;
+    --project-card-header: #e4e4e4;
     --project-card-text: #888;
+    --intro-text-header: #e4e4e4;
+    --buton-hover-background: #2b2e31;
+    --divider-colour: #e4e4e4;
 }
 
 * {
@@ -29,6 +35,7 @@
 body {
     padding-top: 6.5rem;
     background: var(--background-colour);
+    transition: 0.3s ease-in-out all;
 }
 
 main {
@@ -37,6 +44,7 @@ main {
     max-width: var(--content-max-width);
     margin: 0 auto;
     padding-top: 14px;
+    transition: 0.3s ease-in-out all;
 }
 
 /* 
@@ -58,6 +66,7 @@ Home Intro Section
     text-align: center;
     margin-top: 20px;
     /* border: 2px solid red; */
+    transition: 0.3s ease-in-out all;
 }
 
 .home-intro-text h1 {
@@ -65,6 +74,8 @@ Home Intro Section
     font-weight: 700;
     letter-spacing: 0.1px;
     margin: 0;
+    color: var(--intro-text-header);
+    transition: 0.3s ease-in-out all;
 }
 
 .home-intro-text h3 {
@@ -73,6 +84,7 @@ Home Intro Section
     font-size: 35px;
     font-weight: 700;
     color: var(--main-colour);
+    transition: 0.3s ease-in-out all;
 }
 
 .home-intro-text p {
@@ -80,6 +92,7 @@ Home Intro Section
     font-size: 20px;
     font-weight: 500;
     color: var(--home-text-colour);
+    transition: 0.3s ease-in-out all;
 }
 
 .page-button {
@@ -97,10 +110,15 @@ Home Intro Section
     transition: 0.4s;
     cursor: pointer;
     color: var(--button-text-colour);
+    transition: 0.3s ease-in-out all;
+}
+
+.dark-mode .page-button {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 1);
 }
 
 .page-button:hover{
-    background-color: white;
+    background-color: var(--buton-hover-background);
     color: var(--main-colour);
 }
 
@@ -119,11 +137,13 @@ Home Intro Section
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s ease-in-out all;
 }
 
 .home-intro-image img {
     height: 400px;
     width: 400px;
+    transition: 0.3s ease-in-out all;
 }
 
 .home-about {
@@ -137,6 +157,7 @@ Home Intro Section
     align-items: center;
     text-align: center;
     margin-top: 20px;
+    transition: 0.3s ease-in-out all;
 }
 
 .home-about-text p {
@@ -144,6 +165,7 @@ Home Intro Section
     font-size: 16px;
     font-weight: 500;
     color: var(--home-text-colour);
+    transition: 0.3s ease-in-out all;
 }
 
 .home-about-image {
@@ -151,6 +173,7 @@ Home Intro Section
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s ease-in-out all;
 }
 
 .home-about-image img {
@@ -158,6 +181,28 @@ Home Intro Section
     height: 25rem;
     width: 25rem;
 }
+
+.theme-img {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    transition: 0.3s ease-in-out all;
+}
+
+body.dark-mode .dark-img {
+    display: block;
+}
+
+body:not(.dark-mode) .light-img {
+    display: block;
+}
+
+/* Light mode shows light image */
+/* body:not(.dark-mode) .light-img {
+    opacity: 1;
+    visibility: visible;
+} */
 
 .button-container {
     margin-top: 10px;
@@ -193,12 +238,16 @@ Home Intro Section
     .home-intro-image img {
         margin-left: 80px;
         height: 430px;
-        width: 430px;
+        width: 440px;
     }
 
     .home-about-image img {
         height: 450px;
         width: 450px;
+    }
+
+    .theme-img {
+        position: absolute; 
     }
 
     .home-intro-text h1 {
@@ -231,7 +280,6 @@ Home Intro Section
         height: 500px;
         width: 500px;
     }
-
 }
 
 .border {
@@ -255,12 +303,15 @@ Home Projects Section
     border-bottom: 1px solid grey;
     margin-top: 30px;
     padding-top: 0;
+    transition: 0.3s ease-in-out all;
 }
 
 .home-divider h5 {
     margin-top: 15px;
     font-weight: 300;
     font-size: 15px;
+    color: var(--divider-colour); 
+    transition: 0.3s ease-in-out all;
 }
 
 .home-divider span a {
@@ -271,6 +322,7 @@ Home Projects Section
     padding: 3px 3px;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
     border-radius: 3px;
+    transition: 0.3s ease-in-out all;
 }
 
 .home-divider span a:hover {
@@ -296,6 +348,7 @@ Home Projects Section
     text-align: left;
     transition: transform 0.2s;
     margin-bottom: 40px;
+    transition: 0.3s ease-in-out all;
 }
 
 .home-project-card:hover {
@@ -314,6 +367,7 @@ Home Projects Section
     padding: 16px 16px 0 16px;
     margin: 0;
     color: var(--project-card-header);
+    transition: 0.3s ease-in-out all;
 }
 
 .home-project-card .project-type {

@@ -21,8 +21,8 @@
     --card-heading: #e4e4e4;
     --card-background: #2b2e31;
     --card-text: #929191;
-    --card-border: #1c1c1d;
-    --filter-background: white;
+    --card-border: #2b2e31;
+    --filter-background: #2b2e31;
     --banner-text: #e4e4e4; 
 }
 
@@ -89,6 +89,7 @@ Projects Intro
 .projects-banner-text {
     text-align: center;
     color: var(--banner-text); 
+    transition: 0.3s ease-in-out all;
 }
 
 .projects-banner-text h1 {
@@ -96,6 +97,7 @@ Projects Intro
     font-weight: 700;
     font-size: 36px; 
     color: var(--main-colour);
+    transition: 0.3s ease-in-out all;
 }
 
 /* 
@@ -127,12 +129,13 @@ Projects Grid/Cards
   color: var(--main-colour);
   font-weight: 500;
   cursor: pointer;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: 0.3s ease-in-out all;
   background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10"><path fill="%231795DD" d="M1 1l6 6 6-6"/></svg>');
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 12px;
   padding-right: 40px; /* make room for arrow */
+
 }
 
 .filter:focus {
@@ -150,7 +153,7 @@ Projects Grid/Cards
     border: 1px solid var(--card-border);
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: 0.3s ease-in-out all;
     background-color: var(--card-background);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* border: 1px solid var(--main-colour);  */
@@ -189,11 +192,13 @@ Projects Grid/Cards
     font-weight: 600;
     padding: 0 12px;
     margin-bottom: 8px;
+    transition: 0.3s ease-in-out all;
 }
 
 .project-card p {
     padding: 0 16px 16px 12px;
     font-size: 15px;
+    transition: 0.3s ease-in-out all;
     color: var(--card-text);
 }
 

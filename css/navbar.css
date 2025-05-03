@@ -10,8 +10,8 @@
 
 .dark-mode {
     --main-colour: #1E90FF;
-    --background-colour: rgba(28, 28, 29, 0.95);
-    --nav-border: #3b3b3e;
+    --background-colour: rgba(58, 58, 59, 0.95);
+    --nav-border: #5a5a5e;
     --nav-link-colour: #e4e4e4;
 }
 
@@ -30,12 +30,12 @@ NAV BAR
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--background-colour);
+    background-color: rgba(252, 250, 246, 0.95);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--nav-border);
     /* opacity: 1; */
     flex-direction: column;
     z-index: 1000;
@@ -43,7 +43,7 @@ NAV BAR
 }
 
 body.dark-mode .navbar {
-    background-color: rgba(28, 28, 29, 0.95);
+    background-color: rgba(34, 34, 33, 0.95);
 }
 
 .nav-container {
@@ -90,6 +90,10 @@ body.dark-mode .navbar {
     opacity: 0;
 }
 
+.dark-mode .nav-logo::after {
+    background: linear-gradient(120deg, transparent, rgba(34, 34, 33, 0.7), transparent);
+}
+
 .nav-logo:hover::after {
     animation: scan 1.5s ease-in-out infinite;
     opacity: 1;
@@ -123,7 +127,6 @@ body.dark-mode .navbar {
 .nav-links {
     display: flex;
     flex-direction: column;
-    /* background-color: white; */
     height: 0;
     overflow: hidden;
     transition: 0.3s ease-in-out all;
@@ -198,7 +201,7 @@ body.dark-mode .navbar {
         margin-left: 30px;
         font-size: 20px;
         transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-        box-shadow: inset 0 0 0 0 #54b3d6;
+        box-shadow: inset 0 0 0 0 var(--main-colour);
         border-radius: 3px;
         color: var(--nav-link-colour);
     }
