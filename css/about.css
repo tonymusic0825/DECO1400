@@ -24,7 +24,8 @@
     --card-heading: #e4e4e4;
     --card-description-text: #c4c2c2;
     /* --card-border: #1c1c1d; */
-    --card-border: #1E90FF;
+    /* --card-border: #1E90FF; */
+    --card-border: #215d98;
     --card-subheading: #1E90FF; 
     --card-subsubheading: #e4e4e4;
     /* --card-background: #363634; */
@@ -213,7 +214,7 @@ body.dark-mode .card {
 
 .last-item {
     /* border-bottom: 1px solid var(--main-colour); */
-    border-bottom: 1px solid var(--main-colour);
+    border-bottom: 1px solid var(--card-border);
     padding-bottom: 20px;
 }
 

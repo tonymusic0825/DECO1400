@@ -119,6 +119,11 @@ Projects Grid/Cards
     margin-bottom: 20px;
 }
 
+.filter:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+}
+
 .filter {
   appearance: none; /* removes default browser styles */
   padding: 10px 16px;
