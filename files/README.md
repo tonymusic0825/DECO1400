@@ -17,14 +17,14 @@ This site showcases personal and academic projects, experience, and interests in
 No frameworks or build tools — pure front-end implementation.
 
 ## 📂 Project Structure
+```
 project-root/
 │
-├── index.html # Landing page
-├── [...].html # Other content pages
-├── css/ # All CSS stylesheets
-├── js/ # JavaScript files
-├── images/ # Static image assets
-└── files/ # Other downloadable/viewable files (e.g., PDF resume)
-
-
+├── index.html          # Landing page
+├── [...].html          # Other content pages
+├── css/                # All CSS stylesheets
+├── js/                 # JavaScript files
+├── images/             # Static image assets
+└── files/              # Other downloadable/viewable files (e.g., PDF resume)
+```
 
