@@ -66,10 +66,8 @@ Projects Intro
 .projects-banner {
     height: 35vh;
     max-width: var(--content-max-width);
-    /* background: url('../images/contact-banner-v2.png') center/cover no-repeat; */
     border-radius: 7px;
     position: relative;
-    /* border: 2px solid red; */
     margin-bottom: 10px;
 }
 
@@ -79,7 +77,6 @@ Projects Intro
     height: 100%;
     top: 0;
     left: 0;
-    /* background: rgba(0, 0, 0, 0.3); */
     border-radius: 3px;
     display: flex;
     justify-content: center;
@@ -93,7 +90,6 @@ Projects Intro
 }
 
 .projects-banner-text h1 {
-    /* margin-bottom: 20px; */
     font-weight: 700;
     font-size: 36px; 
     color: var(--main-colour);
@@ -135,6 +131,8 @@ Projects Grid/Cards
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s ease-in-out all;
+
+  /* REF: https://www.w3.org/TR/SVG/ */
   background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10"><path fill="%231795DD" d="M1 1l6 6 6-6"/></svg>');
   background-repeat: no-repeat;
   background-position: right 10px center;
@@ -161,7 +159,6 @@ Projects Grid/Cards
     transition: 0.3s ease-in-out all;
     background-color: var(--card-background);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* border: 1px solid var(--main-colour);  */
 }
 
 .project-card img {
@@ -264,6 +261,7 @@ Projects Grid/Cards
     font-weight: 400;
 }
 
+/* REF: Inspired by W3Schools https://www.w3schools.com/howto/howto_css_shake_image.asp */
 @keyframes buzz {
     0% { transform: translateX(0); }
     20% { transform: translateX(-1px); }

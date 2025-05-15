@@ -56,7 +56,7 @@ Contact Banner
 .contact-banner {
     height: 30vh;
     max-width: var(--content-max-width);
-    background: url('../images/contact-banner-v2.png') center/cover no-repeat;
+    background: url('../images/contact-banner-v4.png') center/cover no-repeat;
     border-radius: 7px;
     position: relative;
 }
@@ -102,7 +102,6 @@ Contact Content (Details + Form)
 
 .contact-details,
 .contact-form {
-    /* border: 2px solid blue; */
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -211,10 +210,8 @@ Contact Content (Details + Form)
 }
 
 input:focus, textarea:focus, select:focus {
-    /* border: 2px solid #1795DD; */
     border-color: #1795DD;
     outline: none;
-    /* box-shadow: 0 0 4px #1795DD33;  */
     box-shadow: 0 0 0 1px var(--main-colour), 0 0 4px #1795DD33;
 }
 
@@ -258,11 +255,6 @@ input:focus, textarea:focus, select:focus {
 
     .contact-details,
     .contact-form {
-        /* border: 2px solid blue; */
-        /* display:flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center; */
         border-bottom: none;
     }
 

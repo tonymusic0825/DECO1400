@@ -55,7 +55,6 @@ Home Intro Section
 
 .home-intro {
     display: grid;
-    /* border-bottom: 2px solid grey; */
 }
 
 .home-intro-text {
@@ -65,7 +64,6 @@ Home Intro Section
     align-items: center;
     text-align: center;
     margin-top: 20px;
-    /* border: 2px solid red; */
     transition: 0.3s ease-in-out all;
 }
 
@@ -197,12 +195,6 @@ body.dark-mode .dark-img {
 body:not(.dark-mode) .light-img {
     display: block;
 }
-
-/* Light mode shows light image */
-/* body:not(.dark-mode) .light-img {
-    opacity: 1;
-    visibility: visible;
-} */
 
 .button-container {
     margin-top: 10px;

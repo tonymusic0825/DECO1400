@@ -25,11 +25,13 @@
     --card-description-text: #c4c2c2;
     /* --card-border: #1c1c1d; */
     /* --card-border: #1E90FF; */
-    --card-border: #215d98;
+    /* --card-border: #17436f; */
+    --card-border: #184471;
     --card-subheading: #1E90FF; 
     --card-subsubheading: #e4e4e4;
     /* --card-background: #363634; */
     --card-background: #2b2e31;
+    /* --card-background: #2c2e2f; */
     /* --card-background: #222529; */
     --date-tag: #1E90FF;
     --date-tag-text: white;
@@ -53,13 +55,6 @@ main {
     max-width: var(--content-max-width);
     margin: 0 auto;
 }
-
-/* 
-.dark-mode {
-    --main-colour: #b38af5;
-    --background-colour: #222222;
-} */
-
 
 /* 
 ==========================================================
@@ -89,12 +84,10 @@ CV
     display: flex;
     flex-direction: column;
     width: 80vw;
-    /* max-width: 1000px; */
     max-width: var(--content-max-width);
     margin: 0 auto;
     background-color: var(--background-colour);
     padding: 2rem 0;
-    /* gap: 6rem; */
     justify-content: center;
     align-items: center;
     transition: 0.3s ease-in-out all;
@@ -169,7 +162,7 @@ CV
 }
 
 body.dark-mode .card {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .card header h2 {
@@ -204,7 +197,6 @@ body.dark-mode .card {
 
 .card-grid {
     display: grid;
-    /* grid-template-columns: 1fr 1fr; */
 }
 
 .skills-card {
@@ -213,7 +205,6 @@ body.dark-mode .card {
 
 
 .last-item {
-    /* border-bottom: 1px solid var(--main-colour); */
     border-bottom: 1px solid var(--card-border);
     padding-bottom: 20px;
 }
@@ -223,7 +214,6 @@ body.dark-mode .card {
     text-align: center;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--main-colour); */
     background-color: var(--date-tag);
     width: 130px;
     height: 22px;
@@ -265,9 +255,6 @@ body.dark-mode .card {
     }
 }
 
-
-
-/*  */
 .back-top {
     display:flex;
     gap: 0;

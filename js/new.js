@@ -75,6 +75,8 @@ function setupFilterDropdown() {
 }
 
 // Smooth scrolling for aside nav links in About's Page
+// Code inspired from the following
+// REF: https://css-tricks.com/snippets/jquery/smooth-scrolling/ 
 function setupCVNavigation() {
     const navLinks = getElements('nav a[href^="#"]');
 
@@ -86,7 +88,6 @@ function setupCVNavigation() {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-
                 // Calculate vertical position of the element relative to top
                 const navbarHeight = getElement('nav').offsetHeight + 10;
                 const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
@@ -97,6 +98,8 @@ function setupCVNavigation() {
 }
 
 // Highlight the active aside nav link on the About's Page
+// Inspired by code in the following
+// REF: https://dev.to/nikhilroy2/how-to-create-javascript-scrollspy-vanilla-js-tutorial-35o9
 function setupScrollSpy() {
 
     // Manual breakpoints for each section IDs and their vertical scroll offsets
@@ -144,6 +147,8 @@ function containsNumber(input) {
 function checkName(input) {
     if (containsNumber(input)) {
         return 'Name must not contain numbers.';
+    } else if (input === '') {
+        return 'Name must not be empty.'
     }
     return '';
 }
@@ -155,18 +160,22 @@ function checkEmail(input) {
     const email = input.value || input;
 
     // Check that email contains '@' and also '.'
-    if (!email.includes('@') || !email.includes('.')) {
+    if (input === '') {
+        return 'Email must not be empty.'
+    } else if (!email.includes('@') || !email.includes('.')) {
         return 'Please enter a valid email address.';
     } else if (email.length < 5) { // Checks that email is at least length of 5
         return 'Please enter a valid email address.';
     } else if (!commonDomains.some(tld => email.endsWith(tld))) { // Check if email ends with common domain
         return 'Email domain is not commonly used.';
     }
-
+    
     return '';
 }
 
 // Checks if message is non-empty and Valid
+// Regex handling inspired by the following
+// REF: https://stackoverflow.com/questions/6603015/check-whether-a-string-matches-a-regex-in-js 
 function checkMessage(value) {
     value = value.trim()
 
@@ -230,7 +239,7 @@ function setupContactForm() {
                 clearError(fields.lastName, errors.lastName);
             }
 
-            const emailError = checkEmail(fields.email);
+            const emailError = checkEmail(fields.email.value.trim());
             if (emailError) {
                 valid = false;
                 showError(fields.email, errors.email, emailError);
@@ -238,7 +247,7 @@ function setupContactForm() {
                 clearError(fields.email, errors.email);
             }
 
-            const messageError = checkMessage(fields.message.value);
+            const messageError = checkMessage(fields.message.value.trim());
             if (messageError) {
                 valid = false;
                 showError(fields.message, errors.message, messageError);
@@ -280,12 +289,14 @@ function setupContactForm() {
     
       function clearError(input, errorEl) {
         input.classList.remove('input-error');
-        errorEl.textContent = '';
+        // errorEl.textContent = '';
         errorEl.style.display = 'none';
     }
 }
 
 // Dark/light mode toggle
+// Inspired by code within
+// REF: https://www.youtube.com/watch?v=_gKEUYarehE 
 function setupDarkMode() {
 
     const themeToggle = document.querySelector('.theme-toggle');
@@ -320,6 +331,8 @@ function setupDarkMode() {
 }
 
 // Scroll progress bar
+// Following code is from
+// REF: https://www.w3schools.com/howto/howto_js_scroll_indicator.asp 
 function setupScrollProgressBar() {
     window.addEventListener('scroll', () => {
         const scrollProgress = getElement('#scroll-progress');
@@ -341,6 +354,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setupContactForm();
     setupDarkMode();
     setupScrollProgressBar();
-    setupInitialLoadEffects();
     setupLearnMoreBut();
 });

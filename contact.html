@@ -11,6 +11,7 @@
 
     <body>
         <!-- To void FOUC -->
+        <!-- REF: https://stackoverflow.com/questions/71799083/white-flash-on-dark-mode-on-refreshing-page -->
         <script>
             if (localStorage.getItem('darkmode') === 'active') {
                 document.body.classList.add('dark-mode');

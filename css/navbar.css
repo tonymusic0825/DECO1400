@@ -36,7 +36,6 @@ NAV BAR
     left: 0;
     width: 100%;
     border-bottom: 1px solid var(--nav-border);
-    /* opacity: 1; */
     flex-direction: column;
     z-index: 1000;
     transition: 0.3s ease-in-out all;
@@ -50,7 +49,6 @@ body.dark-mode .navbar {
     width: 80vw;
     max-width: var(--content-max-width);
     margin: 0 auto;
-    /* background-color: red;     */
 }
 
 .nav-header {
@@ -58,8 +56,6 @@ body.dark-mode .navbar {
     justify-content: space-between;
     align-items: center;
     height: 6.5rem;
-    /* margin-bottom: 18px; */
-    /* background-color: aqua; */
 }
 
 .nav-logo {
@@ -72,9 +68,10 @@ body.dark-mode .navbar {
     text-decoration: none;
     cursor: pointer;
     transition: transform 0.4s ease;
-    /* z-index: 1; */
 }
 
+/* Nav Logo Hover inspired by */
+/* REF: https://prismic.io/blog/css-text-animations */
 .nav-logo:hover {
     transform: scale(1.08);
 }
@@ -116,9 +113,7 @@ body.dark-mode .navbar {
   color: #fff;
   cursor: pointer;
   font-size: 100%;
-  /* margin: 12px 0 0; */
   padding: 10px 15px;
-  /* position: relative; */
   text-align: center;
   text-transform: none;
   transition: all 0.1s;
@@ -180,7 +175,6 @@ body.dark-mode .navbar {
     .nav-container {
         display: flex;
         align-items: center;
-        /* background-color: aqua; */
     }
 
     .nav-header {
@@ -191,7 +185,6 @@ body.dark-mode .navbar {
         height: auto;
         align-items: center;
         flex-direction: row;
-        /* width: 100%; */
         margin-left: auto; 
     }
 
