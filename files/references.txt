@@ -1,0 +1,53 @@
+NOTE: All references for code are within the code themselves. 
+
+All images used in this website are AI generated unless they are not listed here. 
+OpenAI. (2025). DALL·E. https://openai.com/dalle.  
+
+
+1. contact-banner-v4.png
+
+In the distance, a building with Asian-inspired architecture is perched on the lake. 
+Golden hour illuminates blooming cherry blossom trees around a pond but the colour of the cherry blossom isn't pink it's the colour #1795DD. 
+A guy underneath a cherry blossom tree is coding away Behind him, a small, calm body of water.
+
+2. about v2.png | about v3.png
+A top-down view of a modern, minimal workspace: dual monitors, open code editor, notes, a coffee mug, perhaps a robot figurine 
+— evokes a developer lifestyle without showing a face. Make it blue themed with the main colour being: ##1795DD.
+
+Draw me the same thing but with darker, cyberpunk-themed colours
+
+3. snake ai.png
+Create a landscape image of an animated happy AI snake
+
+4. astar algo.png
+Now draw me something related to path finding / search algorithm
+
+5. csse2310.png
+draw me something about c programming.
+
+6. comp3702.png
+draw a landscape of bees racing.
+
+7. comp3506.png
+draw me a landscape image of something to do with data structures and algorithms. 
+
+8. csse2010.png
+Now draw a landscape image of a robot pacman.
+
+9. csse1001.png
+Now draw a landscape image of terraria meets minecraft. 
+
+10. machinelearning.png
+use warm colours and draw something about machine learning.
+
+11. flashcards.png
+draw me a landscape image of a flashcards app.
+
+12. sentiment.png
+Draw me a landscape image of a sentiment sleuth app. 
+
+13. AI v4.png
+Create an image of me [Inserted personal Image] 
+but where the person is half robot and half person. Make the surroundings of my face fade out. Blue themed.
+Make sure the background is transparent.
+
