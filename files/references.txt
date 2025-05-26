@@ -3,7 +3,6 @@ NOTE: All references for code are within the code themselves.
 All images used in this website are AI generated unless they are not listed here. 
 OpenAI. (2025). DALL·E. https://openai.com/dalle.  
 
-
 1. contact-banner-v4.png
 
 In the distance, a building with Asian-inspired architecture is perched on the lake. 
