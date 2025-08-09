@@ -29,5 +29,10 @@ project-root/
 ```
 
 ## Screenshots:
-![image]([https://raw.githubusercontent.com/tonymusic0825/NST/refs/heads/main/original_house.jpg](https://github.com/tonymusic0825/DECO1400/blob/main/files/Home.png?raw=true))
+![Home](files/Home.png)
+![About](files/About.png)
+![Projects](files/Projects.png)
+![Contact](files/Contact.png)
+
+
 
