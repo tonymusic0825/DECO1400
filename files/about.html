@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>YSC | Contact</title>
+        <link rel="stylesheet" href="css/navbar.css"/>
+        <link rel="stylesheet" href="css/about.css"/>
+        <script src="https://kit.fontawesome.com/cfa57116e6.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- To avoid FOUC -->
+        <!-- REF: https://stackoverflow.com/questions/71799083/white-flash-on-dark-mode-on-refreshing-page -->
+        <script>
+            if (localStorage.getItem('darkmode') === 'active') {
+                document.body.classList.add('dark-mode');
+            }
+        </script>
+        <!-- Nav Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-header">
+                    <a href="index.html" class="nav-logo">Youngsu.</a>
+                    <button type="button" class="hambgr-btn hambgr">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link active-page">About</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a class="nav-link theme-toggle"><i class="fa-solid fa-moon"></i></a>
+                </div>
+            </div>
+            <div id="scroll-progress"></div>
+        </nav>
+        <!-- End of Nav Bar -->
+        <!-- MAIN -->
+        <main class="page-content">
+            <!-- CV Content -->
+            <div class="content-container">
+                <!-- Aside menu -->
+                <aside class="sidebar">
+                    <nav>
+                        <ul>
+                            <li><a href="#work" class="cv-links">Work</a></li>
+                            <li><a href="#education" class="cv-links">Education</a></li>
+                            <li><a href="#volunteer" class="cv-links">Volunteer</a></li>
+                            <li><a href="#awards" class="cv-links">Awards</a></li>
+                            <li><a href="#certificates" class="cv-links">Certificates</a></li>
+                            <li><a href="#skills" class="cv-links">Skills</a></li>
+                            <li><a href="#languages" class="cv-links">Languages</a></li>
+                            <li><a href="#interests" class="cv-links">Interests</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <!-- End of Aside menu -->
+                <!-- CV Cards -->
+                <div class="content">
+                    <header>
+                        <div class="cv-title">
+                            <h1>CV</h1>
+                            <div class="page-button">
+                                <a href="files/이력서 CV PDF.pdf" download><i class="fa-solid fa-download"></i> Download CV</a>
+                            </div>
+                        </div>
+                        <p>This page outlines my professional experiences, education, skills, and certifications.
+                            It provides a comprehensive view of my background and interests in the fields of software development 
+                            and technology.
+                        </p>
+                    </header>
+
+                    <!-- Work Card -->
+                    <section id="work">
+                        <article class="card">
+                            <header><h2>Work</h2></header>
+                            <div class="date-tag">
+                                <p>2023.02 - 2024.01</p>
+                            </div>
+                            <h3>Software Engineering Intern</h3>
+                            <h4>Zion Solution Inc, South Korea</h4>
+                            <p class="last-item">During my internship at a software company specializing in online banking systems, 
+                                I collaborated closely with a team of AI engineers to design and develop foundational components 
+                                for identity verification technologies. My primary focus was on implementing and training deep learning models 
+                                for ID document recognition and facial recognition, tailored specifically for secure banking applications.</p>
+                            <div class="date-tag">
+                                <p>2021.06 - 2023.02</p>
+                            </div>
+                            <h3>Social Service Worker</h3>
+                            <h4>Korea Coal Corporation, South Korea</h4>
+                            <p class="last-item">During my service at a corporation in Korea, I supported administrative operations by assisting with data management tasks, 
+                                gaining hands-on experience with Microsoft Excel for organizing and analyzing internal records. I also contributed to 
+                                international communications by performing document translations, primarily for materials from Mongolia and Middle Eastern 
+                                countries. Throughout my time there, I collaborated across various departments, strengthening my ability to work effectively
+                                 within diverse teams.</p>
+                            <div class="date-tag">
+                                <p>2024.02 - 2024.06</p>
+                            </div>
+                            <h3>University TA</h3>
+                            <h4>The University of Queensland</h4>
+                            <p class="last-item">Taught the course: Introduction to Programming (CSSE1001) during Semester 1 2024 as a tutor.</p>
+                            <div class="date-tag">
+                                <p>2019.12 - 2020.06</p>
+                            </div>
+                            <h3>Various Part-Time Jobs</h3>
+                            <h4>South Korea</h4>
+                            <p>I worked part-time in fast-food restaurants and convinience stores.</p>
+                        </article>
+                    </section>
+
+                    <!-- Education Card -->
+                    <section id="education">
+                        <article class="card">
+                            <header><h2>Education</h2></header>
+                            <div class="card-grid">
+                                <div class="card-grid-item">
+                                    <div class="date-tag">
+                                        <p>2019.02 - 2025.12</p>
+                                    </div>
+                                    <h3>The University of Queensland</h3>
+                                    <h4>Bachelor of Computer Science</h4>
+                                </div>
+                                <div class="card-grid-item">
+                                    <div class="date-tag">
+                                        <p>2013.02 - 2017.12</p>
+                                    </div>
+                                    <h3>Benowa State High School</h3>
+                                    <h4>Secondary Education</h4>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Volunteer Card -->
+                    <section id="volunteer">
+                        <article class="card">
+                            <header><h2>Volunteer</h2></header>
+                            <div class="date-tag">
+                                <p>2020.02 - 2021.01</p>
+                            </div>
+                            <h3>Technology Literacy Volunteer</h3>
+                            <h4>Wonju City Central Library, South Korea</h4>
+                            <p class="last-item">As a volunteer, I provided one-on-one and small group instruction to elderly participants, 
+                                helping them develop digital skills with computers, smartphones, and other personal devices. 
+                                I focused on making technology more accessible by teaching essential functions such as internet use,
+                                email communication, and mobile applications, while building strong communication and problem-solving 
+                                skills through direct engagement.</p>
+                            <div class="date-tag">
+                                <p>2020.02 - 2021.01</p>
+                            </div>
+                            <h3>Tutor Volunteer</h3>
+                            <h4>National university in Gangneung, South Korea</h4>
+                            <p>As a volunteer tutor, I supported university students in developing a strong foundation in programming logic and 
+                                problem-solving skills. I provided individualized guidance on coursework and assignments, helping students 
+                                understand key concepts and apply them effectively..</p>
+                        </article>
+                    </section>
+
+                    <!-- Awards Card -->
+                    <section id="awards">
+                        <article class="card">
+                            <header><h2>Awards</h2></header>
+                            <div class="date-tag">
+                                <p>2017, Senior Year</p>
+                            </div>
+                            <h3>Benowa State High School</h3>
+                            <h4>International Student Recognition Award</h4>
+                            <p class="last-item">Awarded to the International Student of the year.</p>
+                            <div class="date-tag">
+                                <p>2019, Semester 1</p>
+                            </div>
+                            <h3>The University of Queensland</h3>
+                            <h4>Dean's Commendation Award</h4>
+                            <p class="last-item">Each semester, the Dean's Commendation for Academic Excellence is awarded 
+                                to students who have achieved outstanding results with a minimum GPA of 6.6.</p>
+                            <div class="date-tag">
+                                <p>2019, Semester 2</p>
+                            </div>
+                            <h3>The University of Queensland</h3>
+                            <h4>Dean's Commendation Award</h4>
+                            <p class="last-item">Each semester, the Dean's Commendation for Academic Excellence is awarded 
+                                to students who have achieved outstanding results with a minimum GPA of 6.6.</p>
+                            <div class="date-tag">
+                                <p>2024, Semester 1</p>
+                            </div>
+                            <h3>The University of Queensland</h3>
+                            <h4>Dean's Commendation Award</h4>
+                            <p class="last-item">Each semester, the Dean's Commendation for Academic Excellence is awarded 
+                                to students who have achieved outstanding results with a minimum GPA of 6.6.</p>
+                            <div class="date-tag">
+                                <p>2024, Semester 2</p>
+                            </div>
+                            <h3>The University of Queensland</h3>
+                            <h4>Dean's Commendation Award</h4>
+                            <p>Each semester, the Dean's Commendation for Academic Excellence is awarded 
+                                to students who have achieved outstanding results with a minimum GPA of 6.6.</p>
+                        </article>
+                    </section>
+
+                    <!-- Certificates Card -->
+                    <section id="certificates">
+                        <article class="card">
+                            <header><h2>Certificates</h2></header>
+                            <div class="date-tag">
+                                <p>2020.09</p>
+                            </div>
+                            <h3>Deep Learning Specialisation</h3>
+                            <h4>Coursera</h4>
+                            <p>Completed all 5 courses of the Deep
+                                Learning Specialization. In this Specialization, you built neural network
+                                architectures such as Convolutional Neural Networks, Recurrent
+                                Neural Networks, LSTMs, Transformers, and learned how to make
+                                them better with strategies such as Dropout, BatchNorm, and
+                                Xavier/He initialization.</p>
+                        </article>
+                    </section>
+
+                    <!-- Skills Card -->
+                    <section id="skills">
+                        <article class="card">
+                            <header><h2>Skills</h2></header>
+                            <div class="card-grid skills-card">
+                                <div class="card-grid-item">
+                                    <h3>Python</h3>
+                                    <h4>Fluent</h4>
+                                </div>
+                                <div class="card-grid-item">
+                                    <h3>Java</h3>
+                                    <h4>Proficient</h4>
+                                </div>
+                                <div class="card-grid-item">
+                                    <h3>SQL</h3>
+                                    <h4>Proficient</h4>
+                                </div>
+                                <div class="card-grid-item">
+                                    <h3>Haskell</h3>
+                                    <h4>Learning</h4>
+                                </div>
+                                <div class="card-grid-item">
+                                    <h3>Dafny</h3>
+                                    <h4>Learning</h4>
+                                </div>
+                                <div class="card-grid-item">
+                                    <h3>C</h3>
+                                    <h4>Proficient</h4>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    
+                    <!-- Languages Card -->
+                    <section id="languages">
+                        <article class="card">
+                            <header><h2>Languages</h2></header>
+                            <div class="card-grid">
+                                <div class="card-grid-item">
+                                    <h3>Korean</h3>
+                                    <h4>Native or Bilingual Proficiency</h4>
+                                </div>
+                                <div class="card-grid-item">
+                                    <h3>English</h3>
+                                    <h4>Full Professional Proficiency</h4>
+                                </div>
+                                <div class="card-grid-item">
+                                    <h3>Japanese</h3>
+                                    <h4>Elementary Level</h4>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Interests Card -->
+                    <section id="interests">
+                        <article class="card">
+                            <header><h2>Interests</h2></header>
+                            <div class="card-grid">
+                                <div class="card-grid-item">
+                                    <h3>Chess</h3>
+                                    <h4>Rated 2000 Rapid (Chess.com)</h4>
+                                </div>
+                                <div class="card-grid-item">
+                                    <h3>Video Games</h3>
+                                    <h4>League, Valorant, Lost Ark :)</h4>
+                                </div>
+                                <div class="card-grid-item">
+                                    <h3>Personal Projects</h3>
+                                    <h4>Mainly Machine Learning / AI</h4>
+                                </div>
+                                <div class="card-grid-item">
+                                    <h3>Music</h3>
+                                    <h4>Who doesn't like music...</h4>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+                <!-- End of CV Cards -->
+            </div>
+            <!-- End of CV Content -->
+        <!-- Start of Footer -->
+        <footer class="back-top">
+            <h5>Back To Top</h5>
+            <button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+        </footer>
+        </main>
+    <script src="js/script.js"></script>    
+    </body>
+</html>
