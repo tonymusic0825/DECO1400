@@ -28,3 +28,6 @@ project-root/
 └── files/              # Other downloadable/viewable files (e.g., PDF resume)
 ```
 
+## Screenshots:
+![image]([https://raw.githubusercontent.com/tonymusic0825/NST/refs/heads/main/original_house.jpg](https://github.com/tonymusic0825/DECO1400/blob/main/files/Home.png?raw=true))
+
